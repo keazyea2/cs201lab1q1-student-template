@@ -20,6 +20,39 @@ public class NumbersArray {
     }
 
     // Write your methods here
-    
-}
+    public static Integer findMax(Integer[] arr){
+        int max = arr[0];
+        for (int i=1;i<arr.length;i++){
+            if (arr[i]>max){
+                max = arr[i];
+            }
+        }
+        return max;
+    }
 
+    public static Integer[] findDuplicates(Integer[] arr){
+        Set<>Integer dup = new HashSet<>();
+        Set<>Integer seen = new HashSet<>();
+        for (Integer num : arr){
+            if (!seen.add(num)){
+                dup.add(num);
+            }
+        }
+        return dup.toArray(new Integer[0]);
+    }
+
+    public static Integer[] findUnique(Integer[] arr){
+        Set<>Integer unique = new HashSet<>();
+        Set<>Integer seen = new HashSet<>();
+        Set<>Integer dup = new HashSet<>();
+        for (Integer num : arr){
+            if (!seen.add(num)){
+                dup.add(num);
+            }
+            if (!dup.contains(num)){
+                unique.add(num);
+            }
+        }
+        return unique.toArray(new Integer[0]);
+    }
+}
