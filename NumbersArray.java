@@ -31,8 +31,8 @@ public class NumbersArray {
     }
 
     public static Integer[] findDuplicates(Integer[] arr){
-        Set<>Integer dup = new HashSet<>();
-        Set<>Integer seen = new HashSet<>();
+        Set<Integer> dup = new HashSet<>();
+        Set<Integer> seen = new HashSet<>();
         for (Integer num : arr){
             if (!seen.add(num)){
                 dup.add(num);
@@ -42,9 +42,9 @@ public class NumbersArray {
     }
 
     public static Integer[] findUnique(Integer[] arr){
-        Set<>Integer unique = new HashSet<>();
-        Set<>Integer seen = new HashSet<>();
-        Set<>Integer dup = new HashSet<>();
+        Set<Integer> unique = new HashSet<>();
+        Set<Integer> seen = new HashSet<>();
+        Set<Integer> dup = new HashSet<>();
         for (Integer num : arr){
             if (!seen.add(num)){
                 dup.add(num);
