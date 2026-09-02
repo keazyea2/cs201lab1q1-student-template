@@ -49,6 +49,8 @@ public class NumbersArray {
             if (!seen.add(num)){
                 dup.add(num);
             }
+        }
+        for (Integer num : arr){
             if (!dup.contains(num)){
                 unique.add(num);
             }
